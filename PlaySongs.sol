@@ -39,6 +39,7 @@ uint public numUsers;
       if (userInfo[msg.sender].userAddress == msg.sender) revert();
       userInfo[msg.sender].userAddress = msg.sender;
       userInfo[msg.sender].tokensBought = 5;
+      balanceTokens -= 5;
       numUsers += 1;
   }
   
@@ -53,7 +54,7 @@ uint public numUsers;
  function. Accepting money can not get any easier than this!
  */
     function buy() payable returns (uint) {
-        uint tokensToBuy = msg.value / pricePerPlay;
+        uint tokensToBuy = (msg.value / pricePerPlay)/100000000000000000;
         if (tokensToBuy > balanceTokens) revert();
         userInfo[msg.sender].userAddress = msg.sender;
         userInfo[msg.sender].tokensBought += tokensToBuy;
