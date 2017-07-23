@@ -2,43 +2,72 @@
 <html>
 <head>
 	<link rel="stylesheet" href="bootstrap.min.css" type="text/css">
-	<title> Express Music Server </title>
-	<style>
-		body {
-		
-			padding: 30px;
-			background: url('./bg-musical.png');
-			text-align: center;
-		}
-		.contents{
-			background: #fff;
-			padding: 20px;
-			margin: auto;
-			opacity: 0.7;
-			text-align: center;
-		}
-		.contents button{
-			width: 100px;
-			opacity: 0.9;
-			background: #000;
-		}
-		h1 {
-			color: #333333;
-			font-size: 60px;
-		}
-		h2 {
-			color: #2e2e2e;
-			font-size: 28px;
-		}
-		a {
-			color: #2f2f2f;
-			font-size: 18px
-		}
-		
-	</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<title> Juke </title>
+	
 </head>
 <body>
-	<div class="container contents">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="album.js"></script>
+
+	<div id="body-left">
+		<div id="bg-before"></div>
+			<!-- <div id="bg"></div> -->
+
+			<main>
+			  <div id="albumCover"></div>
+			  <div id="progress">
+			    <div id="progress-bar"></div>
+			  </div>
+			  <div id="title">
+			    <div id="title-text">Hey Girl // Florence Welch, Lady Gaga</div>
+			  </div>
+			  <div id="controls">
+			    <div class="control"><i class="material-icons icon">&#xE045;</i></div>
+			    <div class="control" id="controls-play" onclick="play()">
+			      <i class="material-icons icon icon-play">&#xE037;</i>
+			      <i class="material-icons icon icon-pause">&#xE034;</i>
+			    </div>
+			    <div class="control"><i class="material-icons icon">&#xE044;</i></div>
+			  </div>
+			</main>
+		<!-- <div id="body-topleft">
+			
+		</div>
+
+		<div id="body-bottomleft">
+		</div> -->
+
+	</div>
+
+	<div id="body-right">
+		<h3 style="text-align: center;color:white">Hot Summer Faves</h3>
+		<ul class="list-group">
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		</ul>
+	</div>
+
+
+
+	<!-- <div class="container contents">
 	<h1>  Express Musical </h1>
 	<hr>
 	<h2> Fast Music to Keep you surrounded with Melodic Beats </h2>
@@ -67,7 +96,7 @@
 				<a href="http://localhost:3003/download?id=beginning.mp3"  target="_blank"> <button class="btn btn-success"> Downnload </button> </a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
 </body>
 </html>

@@ -11,6 +11,10 @@ app.get('/',function(req,res){
 
 app.use('/public', express.static(__dirname + '/public'));
 
+app.get('/test', function(req, res, next) {
+  res.json({ message: 'Hello World' });
+});
+
 /** Implementing Simple Music Server using Express JS **/
 app.get('/music', function(req,res){
 	// File to be served
@@ -32,6 +36,7 @@ app.get('/music', function(req,res){
 	});
 	
 });
+
 app.get('/download', function(req,res){
 	var fileId = req.query.id;
 	var file = __dirname + '/music/' + fileId;
