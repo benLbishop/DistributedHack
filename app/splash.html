@@ -3,8 +3,78 @@
   <head>
     <meta charset="utf-8">
     <title>TOKEN - Support the artists you love!</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato');
+    </style>
+
+    <style media="screen">
+      body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        color: white;
+        background: url("./resources/images/splash-bg.jpg") no-repeat fixed center;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) );
+      }
+      .center-box {
+        min-width: 300px;
+        width: 40%;
+        max-width: 700px;
+        padding-top: 150px;
+        margin: 0 auto;
+      }
+      .logo {
+        max-width: 100%;
+      }
+      .pitch {
+        padding: 5px 0 12px;
+        font-size: 25px
+      }
+      .interactions {
+        padding: 5px 0;
+        margin: 0 auto;
+      }
+      button {
+        min-width: 120px;
+        height: 52px;
+        margin: 6px;
+        border-radius: 6px;
+        font-size: 24px;
+        color: white;
+        border: solid 2px white;
+      }
+      button.solid {
+        background-color: blue;
+      }
+      button.outline {
+        background-color: transparent;
+      }
+    </style>
+
   </head>
   <body>
-    
+    <div class="container">
+
+      <div class="center-box">
+        <img class="logo"src="./resources/images/test_logo.png" alt="Jukebox logo">
+      </div>
+
+      <div class="center-box">
+        <div class="pitch">
+          Directly support your favorite artists just by listening to favorite songs/
+        </div>
+        <div class="interactions">
+          <button class="solid" type="button" name="button">Get Started</button>
+          <button class="outline" type="button" name="button">Sign In</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
