@@ -4,22 +4,17 @@ var app = express();
 
 
 app.get('/',function(req,res){
-	
-	return res.redirect('/public/home.html');
-
+	return res.redirect('./index.html');
 });
 
 app.use('/public', express.static(__dirname + '/public'));
 
-app.get('/test', function(req, res, next) {
-  res.json({ message: 'Hello World' });
-});
 
 /** Implementing Simple Music Server using Express JS **/
 app.get('/music', function(req,res){
 	// File to be served
-	
-	var fileId = req.query.id; 
+
+	var fileId = req.query.id;
 	var file = __dirname + '/music/' + fileId;
 	fs.exists(file,function(exists){
 		if(exists)
@@ -32,9 +27,9 @@ app.get('/music', function(req,res){
 			res.send("Its a 404");
 			res.end();
 		}
-	
+
 	});
-	
+
 });
 
 app.get('/download', function(req,res){
@@ -54,8 +49,8 @@ app.get('/download', function(req,res){
 			res.end();
 		}
 	});
-	
-	
+
+
 });
 
 
