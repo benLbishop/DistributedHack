@@ -2,14 +2,16 @@ body {
 	/*padding: 10px;*/
 	/*background: url('./bg-musical.png');*/
 	/*text-align: center;*/
+	overflow-y: hidden;
 }
 
 #body-left{
 	float:left;
-	padding:15px;
-	height:auto;
+	height:100vh;
 	width:40%;
+	max-width: 360px;
 	background-color:red;
+	box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
 }
 #body-topleft{
 	height:auto;
@@ -19,6 +21,7 @@ body {
 #body-bottomleft{
 	height:auto;
 	width:100%;
+	padding:15px;
 	background-color:yellow;
 }
 #body-right{
@@ -27,6 +30,7 @@ body {
 	height:100vh;
 	width:60%;
 	background-color:#444;
+	overflow-y: auto;
 }
 
 
@@ -126,10 +130,6 @@ a {
 }
 main {
   /*position: absolute;*/
-  top: 2rem;
-  right: 0;
-  left: 0;
-  bottom: 2rem;
   padding: 0 calc(30% - 10rem);
   text-align: center;
 }
@@ -140,7 +140,7 @@ main {
   background-image: url(http://gagadaily.com/uploads/stories/monthly_2016_09/joanne.jpg.a6d8d6fd6e671a82ae75e80925ff43d3.jpg);
   background-size: cover;
   display: inline-block;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);*/
 }
 
 #progress {
@@ -231,4 +231,15 @@ main {
 }
 #controls-play.play .icon-play {
   display: none;
+}
+
+
+.track-queue {
+	height: 100%;
+	overflow-y: auto;
+}
+.queue-item {
+	min-height: 42px;
+	padding: 0 15px;
+	border-top: solid 1px rgba(250, 250, 250, 0.5);
 }
