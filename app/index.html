@@ -1,23 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MetaCoin - Truffle Webpack Demo w/ Frontend</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <script src="./app.js"></script>
+	<link rel="stylesheet" href="./stylesheets/bootstrap.min.css" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="./stylesheets/app.css" type="text/css">
+	<title> Juke </title>
+
 </head>
 <body>
-  <h1>MetaCoin</h1>
-  <h2>Example Truffle Dapp</h2>
-  <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./javascripts/album.js"></script>
 
-  <br>
-  <h1>Send MetaCoin</h1>
-  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
-  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
-  <br><br><button id="send" onclick="App.sendCoin()">Send MetaCoin</button>
-  <br><br>
-  <span id="status"></span>
-  <br>
-  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+	<div id="body-left">
+		<div id="bg-before"></div>
+			<!-- <div id="bg"></div> -->
+
+		<main>
+		  <div id="albumCover">
+				<div id="controls">
+			    <div class="control"><i class="material-icons icon">&#xE045;</i></div>
+			    <div class="control" id="controls-play" onclick="play()">
+			      <i class="material-icons icon icon-play">&#xE037;</i>
+			      <i class="material-icons icon icon-pause">&#xE034;</i>
+			    </div>
+			    <div class="control"><i class="material-icons icon">&#xE044;</i></div>
+			  </div>
+			</div>
+		  <div id="progress">
+		    <div id="progress-bar"></div>
+		  </div>
+		  <div id="title">
+		    <div id="title-text">Hey Girl // Florence Welch, Lady Gaga</div>
+		  </div>
+
+		</main>
+
+		<div class="track-queue">
+			<h3>On deck...</h3>
+			<div class="queue-item">
+				<span></span>
+				<span>
+					<h5>Right Here, Right Now</h5>
+					<h6>Fatboy Slim</h6>
+				</span>
+				<span></span>
+			</div>
+			<div class="queue-item">
+				<span></span>
+				<span>
+					<h5>Right Here, Right Now</h5>
+					<h6>Fatboy Slim</h6>
+				</span>
+				<span></span>
+			</div>
+			<div class="queue-item">
+				<span></span>
+				<span>
+					<h5>Right Here, Right Now</h5>
+					<h6>Fatboy Slim</h6>
+				</span>
+				<span></span>
+			</div>
+			<div class="queue-item">
+				<span></span>
+				<span>
+					<h5>Right Here, Right Now</h5>
+					<h6>Fatboy Slim</h6>
+				</span>
+				<span></span>
+			</div>
+		</div>
+
+		<!-- <div id="body-topleft">
+
+		</div>
+
+		<div id="body-bottomleft">
+		</div> -->
+
+	</div>
+
+
+	<div id="body-right">
+		<div class="main-search">
+			<input type="text" />
+		</div>
+		<h3 style="text-align: center;color:white">Hot Summer Faves</h3>
+		<ul class="list-group">
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		</ul>
+	</div>
+
+
+
+	<!-- <div class="container contents">
+	<h1>  Express Musical </h1>
+	<hr>
+	<h2> Fast Music to Keep you surrounded with Melodic Beats </h2>
+	<hr>
+	<a href="https://rishabh.io">  Rishabh IO	</a>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img img-responsive" src="song.png"/>
+				<h2> hello.mp3 </h2>
+
+				<a href="http://localhost:3003/music?id=hello.mp3" target="_blank"> <button class="btn btn-success"> Play </button>	</a> <hr>
+				<a href="http://localhost:3003/download?id=hello.mp3"  target="_blank"> <button class="btn btn-success"> Downnload </button> </a>
+			</div>
+			<div class="col-md-4">
+			<img class="img img-responsive" src="song.png"/>
+				<h2> divine.mp3 </h2>
+				<a href="http://localhost:3003/music?id=divine.mp3" target="_blank"> <button class="btn btn-success"> Play </button>	</a> <hr>
+				<a href="http://localhost:3003/download?id=divine.mp3"  target="_blank"> <button class="btn btn-success"> Downnload </button> </a>
+			</div>
+			<div class="col-md-4">
+			<img class="img img-responsive" src="song.png"/>
+				<h2> beginning.mp3 </h2>
+				<a href="http://localhost:3003/music?id=beginning.mp3" target="_blank"> <button class="btn btn-success"> Play </button>	</a> <hr>
+				<a href="http://localhost:3003/download?id=beginning.mp3"  target="_blank"> <button class="btn btn-success"> Downnload </button> </a>
+			</div>
+		</div>
+	</div> -->
+
 </body>
 </html>
